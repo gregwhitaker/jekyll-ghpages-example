@@ -1,0 +1,28 @@
+plugins {
+    id 'base'
+    id 'distribution'
+}
+
+// Builds the site
+task jekyllBuild(type: Exec) {
+    inputs.dir('src').withPathSensitivity(PathSensitivity.RELATIVE)
+    outputs.dir("${buildDir}/_site")
+
+    commandLine "jekyll", "build", "--source", "${projectDir}/src", "--destination", "${buildDir}/_site"
+}
+build.dependsOn jekyllBuild
+
+// Starts the development webserver
+task jekyllServe(type: Exec) {
+    commandLine "jekyll", "serve", "--source", "${projectDir}/src"
+}
+
+// Packages the website for release
+task buildRelease(type: Copy, dependsOn: jekyllBuild) {
+    from "${buildDir}/_site"
+    into "$projectDir/site"
+}
+
+clean {
+    delete '.sass-cache'
+}
