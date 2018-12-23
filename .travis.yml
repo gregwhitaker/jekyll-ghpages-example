@@ -3,6 +3,8 @@ sudo: false
 jdk:
 - oraclejdk8
 install: true
+before_install:
+  gem install bundler jekyll
 script: ./gradlew jekyllBuild
 before_cache:
 - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
@@ -11,4 +13,3 @@ cache:
   - $HOME/.gradle/caches/
   - $HOME/.gradle/wrapper/
   - $HOME/.m2
-  
