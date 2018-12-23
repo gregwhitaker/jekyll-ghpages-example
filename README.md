@@ -18,9 +18,11 @@ To view website changes locally before committing to Github, run the following c
     ./gradlew jekyllServe
 
 ## Deploying the Website to GitHub Pages
-Run the following command to deploy website changes to Github Pages:
+1. Run the following command to deploy website changes to Github Pages:
 
-    ./gradlew jekyllRelease
+        ./gradlew jekyllRelease
+
+2. Commit the changes to Github.
 
 ## Bugs and Feedback
 For bugs, questions and discussions please use the [Github Issues](https://github.com/gregwhitaker/jekyll-ghpages-example/issues).
