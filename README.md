@@ -1,12 +1,26 @@
 # jekyll-ghpages-example
-
 An example of deploying a Jekyll website to GitHub Pages using Gradle.
 
+## Prerequisites
+Serving the example application with Github Pages requires that Github Pages has been activated for the repository and
+it is configured to serve content from the `/docs` folder.
+
+![ghpages config](ghpages_config.png)
+
 ## Building the Website
-TBD
+Run the following command to build the website locally:
+
+    ./gradlew jekyllBuild
+
+## Serving the Site Locally
+To view website changes locally before committing to Github, run the following command:
+
+    ./gradlew jekyllServe
 
 ## Deploying the Website to GitHub Pages
-TBD
+Run the following command to deploy website changes to Github Pages:
+
+    ./gradlew jekyllRelease
 
 ## Bugs and Feedback
 For bugs, questions and discussions please use the [Github Issues](https://github.com/gregwhitaker/jekyll-ghpages-example/issues).
