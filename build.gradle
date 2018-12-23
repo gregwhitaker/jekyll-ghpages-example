@@ -8,7 +8,7 @@ task jekyllBuild(type: Exec) {
     inputs.dir('src').withPathSensitivity(PathSensitivity.RELATIVE)
     outputs.dir("${buildDir}/_site")
 
-    commandLine "jekyll", "build", "--source", "${projectDir}/src", "--destination", "${buildDir}/_site"
+    commandLine "bundle", "exec", "jekyll", "build", "--source", "${projectDir}/src", "--destination", "${buildDir}/_site"
 }
 build.dependsOn jekyllBuild
 

@@ -12,7 +12,7 @@ it is configured to serve content from the `/docs` folder.
 ## Building the Website
 Run the following command to build the website locally:
 
-    ./gradlew jekyllBuild
+    ./gradlew build
 
 ## Serving the Site Locally
 To view website changes locally before committing to Github, run the following command:

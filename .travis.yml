@@ -5,7 +5,7 @@ jdk:
 install: true
 before_install:
   gem install bundler jekyll
-script: ./gradlew jekyllBuild
+script: ./gradlew build
 before_cache:
 - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
 cache:
