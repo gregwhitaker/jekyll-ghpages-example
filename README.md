@@ -1,6 +1,4 @@
 # jekyll-ghpages-example
-[![Build Status](https://travis-ci.org/gregwhitaker/jekyll-ghpages-example.svg?branch=master)](https://travis-ci.org/gregwhitaker/jekyll-ghpages-example)
-
 An example of deploying a Jekyll website to GitHub Pages using Gradle.
 
 ## Prerequisites
