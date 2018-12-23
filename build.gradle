@@ -20,7 +20,7 @@ task jekyllServe(type: Exec) {
 // Packages the website for release
 task buildRelease(type: Copy, dependsOn: jekyllBuild) {
     from "${buildDir}/_site"
-    into "$projectDir/site"
+    into "$projectDir/doc"
 }
 
 clean {
